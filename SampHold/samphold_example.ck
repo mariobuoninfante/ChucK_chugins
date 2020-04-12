@@ -3,7 +3,7 @@
 // the signal connected to chan(1)
 // decreases in amplitude
 
-SampHold SH => dac;
+SampHold SH => blackhole;
 SinOsc input => SH.chan(0);
 Phasor ctrl => SH.chan(1);
 
