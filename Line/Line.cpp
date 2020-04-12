@@ -1,5 +1,5 @@
 /*
- * Wrap UGen - wraps audio signals
+ * Line UGen - linear audio signal
  * based on Perry Cook's Envelope
  * 
  * @author      Mario Buoninfante
