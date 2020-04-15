@@ -55,11 +55,13 @@ SAMPLE tick ( SAMPLE in )
 float setLow(float x)
 {
     low = x;
+    return x;
 }
 
 float setHi(float x)
 {
     hi = x;
+    return x;
 }
 
 float getLow()
