@@ -1,10 +1,10 @@
 
 # chugin name
-CHUGIN_NAME=SampHold
+CHUGIN_NAME=Accumulator
 
 # all of the c/cpp files that compose this chugin
 C_MODULES=
-CXX_MODULES=SampHold.cpp
+CXX_MODULES=Accumulator.cpp
 
 # where the chuck headers are
 CK_SRC_PATH?=../chuck/include/
