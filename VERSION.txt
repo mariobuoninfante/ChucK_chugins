@@ -1,3 +1,8 @@
+2021-06-27
+---
+  - updated ./chuck to ChucK 1.4.1.0
+  - fixed issue with tick method in Relational.cpp
+
 2020-10-19
 ---
   - added Accumulator chugin

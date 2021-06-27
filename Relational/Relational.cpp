@@ -49,15 +49,15 @@ public:
     {
         if (m_operator == 0)
             return in == m_operand;
-        if (m_operator == 1)
+        else if (m_operator == 1)
             return in != m_operand;
-        if (m_operator == 2)
+        else if (m_operator == 2)
             return in > m_operand;
-        if (m_operator == 3)
+        else if (m_operator == 3)
             return in < m_operand;
-        if (m_operator == 4)
+        else if (m_operator == 4)
             return in >= m_operand;
-        if (m_operator == 5)
+        else
             return in <= m_operand;
     }
 

@@ -3,8 +3,8 @@
  Compiler and Virtual Machine
  
  Copyright (c) 2004 Ge Wang and Perry R. Cook.  All rights reserved.
- http://chuck.stanford.edu/
- http://chuck.cs.princeton.edu/
+   http://chuck.stanford.edu/
+   http://chuck.cs.princeton.edu/
  
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -23,18 +23,40 @@
  -----------------------------------------------------------------------------*/
 
 //-----------------------------------------------------------------------------
-// file: ulib_regex.h
-// desc: regex library
+// name: util_platforms.h
+// desc: platform-specific utilities (e.g., Android)
 //
-// author: Spencer Salazar (spencer@ccrma.stanford.edu)
-// date: Summer 2013
+// author: Andriy Kunitsyn (kunitzin@gmail.com) ChuckAndroid
+//         Ge Wang (https://ccrma.stanford.edu/~ge/) added util_platforms.*
+// date: Summer 2021
 //-----------------------------------------------------------------------------
-#ifndef __ULIB_REGEX_H__
-#define __ULIB_REGEX_H__
-
-#include "chuck_dl.h"
-
-DLL_QUERY regex_query( Chuck_DL_Query * QUERY );
+#ifndef __UTIL_PLATFORMS_H__
+#define __UTIL_PLATFORMS_H__
 
 
-#endif // __ULIB_REGEX_H__
+
+
+//-----------------------------------------------------------------------------
+#ifdef __ANDROID__
+//-----------------------------------------------------------------------------
+#include <jni.h>
+#include <stdio.h>
+
+
+//-----------------------------------------------------------------------------
+// name: class ChuckAndroid
+// desc: android specific ChucK utilities
+//-----------------------------------------------------------------------------
+class ChuckAndroid
+{
+public:
+    static JavaVM * getJVM();
+    static FILE * getTemporaryFile();
+};
+
+#endif // __ANDROID__
+
+
+
+
+#endif // __UTIL_PLATFORMS_H__
